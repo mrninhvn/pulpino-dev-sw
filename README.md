@@ -12,7 +12,7 @@ For the basic RV32I instruction set also the official toolchain can be used.
 
 The software compilation flow is based on CMake. A version of CMake >= 2.8.0 is
 required, but a version greater than 3.1.0 is recommended due to support for
-ninja.
+ninja and `python-is-python2` is recommended.
 
 CMake uses out-of-source builds which means you will need a separate build
 folder for the software.
@@ -27,9 +27,17 @@ Now you are ready to start compiling software!
 
 ## Compiling
 
-Switch to the build folder and compile the application you are interested in:
+Switch to the build folder and run config file:
+
+    ./cmake_configure.riscv.gcc.sh
+
+Compile the application you are interested in:
 
     make applicationName && make applicationName.links
+
+Or make all applications:
+
+    make
 
 This command will compile the application and generate SLM to Upload.
 
