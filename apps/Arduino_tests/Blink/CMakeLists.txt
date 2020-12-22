@@ -1,0 +1,1 @@
+add_application(Blink Blink.cpp LABELS "arduino")
